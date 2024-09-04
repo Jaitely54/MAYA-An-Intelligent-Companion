@@ -1,6 +1,6 @@
 # MAYA: The AI Assistant
 
-MAYA is a cutting-edge AI assistant designed to enhance user interaction through advanced generative AI models. Inspired by sophisticated assistants like Alexa and Siri, MAYA offers a wide range of features to make daily tasks easier and more efficient. With its intuitive responses and personalized interactions, MAYA aims to be a versatile and intelligent companion for various applications.
+MAYA is an advanced AI assistant designed to provide seamless user interaction and support. Inspired by the sophisticated capabilities of FRIDAY and the iconic JARVIS, MAYA combines cutting-edge generative AI with intuitive design to create a versatile and intelligent companion.
 
 ## Features
 
