@@ -66,7 +66,7 @@ def takecmd():
 
 
 if __name__ == "__main__":
-    speak("Hello, my name is Maya. How can I help you?")
+    speak("Hey there, my name is Maya. How can I help you? ...")
 
     while True:
         # query = takecmd().lower()
@@ -74,4 +74,4 @@ if __name__ == "__main__":
 
 
         if "hello" in query:
-            speak("Hello, my name is Maya. How can I help you?")
+            speak("hey KJ, how are you? ...")
