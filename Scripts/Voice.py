@@ -73,4 +73,4 @@ if __name__ == "__main__":
 
 
         if "hello" in query:
-            speak("hey Jaitely, its a new day and I am here to help you.")
+            speak("Hello, my name is Maya. How can I help you?")
