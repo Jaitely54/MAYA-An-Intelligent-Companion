@@ -1,0 +1,13 @@
+speechrecognition
+requests
+pyttsx3
+pyaudio
+llama-cpp-python
+ollama
+transformers
+torch
+psutil
+TTS
+py-cpuinfo
+GPUtis
+edge-tts
