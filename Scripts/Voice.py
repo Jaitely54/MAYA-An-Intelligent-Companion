@@ -4,7 +4,8 @@ import speech_recognition as sr
  
 
 def speak(data):
-    voice = 'en-US-AvaNeural'
+    # voice = 'en-US-AvaNeural'
+    voice = 'ta-IN-PallaviNeural'
     command = f'edge-tts --voice "{voice}" --text "{data}" --write-media "data.mp3"'
     os.system(command)
 
