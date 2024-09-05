@@ -11,3 +11,4 @@ TTS
 py-cpuinfo
 GPUtis
 edge-tts
+google-api-python-client
