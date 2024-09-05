@@ -75,20 +75,23 @@ def parse_query(query):
     Returns:
         bool: Whether a forecast is requested.
         int: Number of days for the forecast.
-        str: City name.
+        str: City name or 'current' for the current city.
     """
     query = query.lower()
     forecast = False
     days = 0
     city = None
 
-    # Extract city name
-    city_keywords = ["in", "of", "at"]
-    for keyword in city_keywords:
-        if keyword in query:
-            city_part = query.split(keyword)[-1].strip()
-            city = city_part.split(" ")[0]  # Assuming the city is the first part after the keyword
-            break
+    if "my current city" in query or "here" in query:
+        city = "current"
+    else:   
+        # Extract city name if mentioned
+        city_keywords = ["in", "of", "at"]
+        for keyword in city_keywords:
+            if keyword in query:
+                city_part = query.split(keyword)[-1].strip()
+                city = city_part.split(" ")[0]  # Assuming the city is the first part after the keyword
+                break
 
     if "tomorrow" in query:
         forecast = True
@@ -104,23 +107,21 @@ def parse_query(query):
     return forecast, days, city
 
 if __name__ =='__main__':
-    # Example query
-    query = "what will be the weather updates of meerut tomorrow"
+    # Example queries
+    queries = [
+        "what will be the weather updates of meerut tomorrow",
+        "what will be the weather updates of here",
+    ]
 
-    if "hi" in query or "hello" in query:
-        print("hi")
-
-    elif "weather" in query:
-        forecast, days, city = parse_query(query)
-        if city:
-            weather_info = get_weather(openweathermap_api_key, city, forecast, days)
-            print(weather_info)
-        else:
-            # Default to IP-based city detection if no city is specified
-            city = get_city_from_ipinfo(ipinfo_api_token)
+    for query in queries:
+        if "hi" in query or "hello" in query:
+            print("hi")
+        elif "weather" in query:
+            forecast, days, city = parse_query(query)
+            if city == "current":
+                city = get_city_from_ipinfo(ipinfo_api_token)
             if city:
-                print(f"Detected city: {city}")
                 weather_info = get_weather(openweathermap_api_key, city, forecast, days)
                 print(weather_info)
             else:
-                print("Could not detect city based on IP address.")
+                print("Could not detect city based on IP address or provided query.")
