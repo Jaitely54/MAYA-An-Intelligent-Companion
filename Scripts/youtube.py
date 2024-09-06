@@ -44,8 +44,8 @@ def get_main_title(title):
 # Test function
 def main():
     try:
-        # command = "maya play mahabharat new theme song"
-        command = "maya play Are dwarpalo"
+        command = "maya play mahabharat new theme song"
+        # command = "maya play Are dwarpalo"
         # command = "maya play TERI BANKI ADAA NE OH SANWARE"
         print(f"Command received: {command}")
         process_command(command)

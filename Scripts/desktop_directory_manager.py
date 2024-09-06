@@ -44,3 +44,4 @@ if __name__ == "__main__":
         command ="delete the directory named bhaikipardai"
         if command:
             process_command(command)
+9876
