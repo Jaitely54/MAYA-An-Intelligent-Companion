@@ -157,7 +157,8 @@ def parse_query(query):
 if __name__ == '__main__':
     # Example queries
     queries = [
-        "what will be the weather updates of here tomorrow?"
+        "what will be the weather updates of here tomorrow",
+        "what will be the weather updates of london today",
     ]
 
     for query in queries:
