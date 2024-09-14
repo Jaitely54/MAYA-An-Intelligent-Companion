@@ -1,14 +1,14 @@
 import requests
 from datetime import datetime, timedelta
-from llama_cpp import Llama  # Import the Llama 2 model wrapper
+from llama_cpp import Llama 
 from keys import openweathermap_api_key, ipinfo_api_token
 from dynamics import llama_7b
 
 # Initialize the Llama 2 model
 
-model_used = llama_7b
+model_using = llama_7b
 llama_model = Llama(
-    model_path=model_used,  # Load the model
+    model_path=model_using,  
     verbose=False
 )
 
